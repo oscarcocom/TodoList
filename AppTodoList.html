@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./TERNARIOS Y CONDICIONALES/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <nav class="navbar  bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <p class="text-warning">Mi primera app con el Ingeniero oscar cocom</p>
+          <img src="data:image/jpeg;base64,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" alt="" width="30" height="24">
+        </a>
+      </div>
+    </nav>
+    <div class="d-flex  justify-content-center container-fluid">
+     
+      <div id="MainRow" class=" row col-md-4">
+        <div class="col-md-8">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Actividad a anexar</label
+          >
+          <input
+            id = "inputValue"
+            type="text"
+            class="form-control"
+            placeholder="Ingresa una de tus actividades"
+           
+          />
+          
+          <button onclick="Validador()" class="btn btn-primary" type="button" >
+            <small>Anexar</small>
+         
+            <!-- <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="visually-hidden">Loading...</span> -->
+          </button>
+        </div>
+
+        <div class="container-md">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col .text-warning"><p class="text-success">Activiti</p></th>
+                <th scope="col .text-warning"><p class="text-warning">Action</p></th>
+               
+              </tr>
+          <!-- UI USER INTERFACE (INTERFAZ DE USUARIO)/ UX USER EXPERIENCE (EXPERIENSAS) UX / UI -->
+            </thead>
+            <tbody id="Tbody" class="primary">
+              <tr class="trActiviti"  >
+                <th scope="row">1</th>
+                <td class="Actividad">Ir al super</td>
+                <td><button class=" BottonEliminar btn btn-warning">Eliminar <i class="large material-icons">delete_forever</i></button></td>
+              
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>pasear al perro</td>
+                <td><button class="BottonEliminar btn btn-warning">Eliminar  <i class="large material-icons">delete_forever</i></button></td>
+                 
+              </tr>
+           
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+     
+    </div>
+    </body>
+
+    <script src="./AppTodoList.js" />
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  >
+
+  </script>
+  <script>
+function myFunction() {
+  alert("hola")
+}
+</script>
+</html>
